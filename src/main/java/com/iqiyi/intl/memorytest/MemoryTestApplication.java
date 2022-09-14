@@ -38,4 +38,11 @@ public class MemoryTestApplication {
 		return "success";
 	}
 
+	@GetMapping("gc")
+	public String gc() {
+		System.gc();
+		System.runFinalization();
+		return "success";
+	}
+
 }
